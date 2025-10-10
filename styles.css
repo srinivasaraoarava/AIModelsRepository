@@ -143,14 +143,56 @@ body {
     border: 1px solid #e5e7eb;
 }
 
+.trend-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .trend-chart h3 {
     font-size: 0.95rem;
     font-weight: 600;
     color: #4b5563;
-    margin-bottom: 15px;
+    margin: 0;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.date-filter {
+    display: flex;
+    gap: 6px;
+    background: white;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.filter-btn:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
 }
 
 .chart-container {
@@ -333,6 +375,20 @@ body {
     
     .model-header h2 {
         font-size: 1.2rem;
+    }
+    
+    .trend-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .date-filter {
+        width: 100%;
+    }
+    
+    .filter-btn {
+        flex: 1;
+        text-align: center;
     }
 }
 
