@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Models - Home</title>
+    <title>AI Models - Contact Us</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
             <button class="close-btn" id="closeBtn" aria-label="Close Navigation">&times;</button>
         </div>
         <ul class="nav-list">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a href="index.html" class="nav-link">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -53,7 +53,7 @@
                     <span>Compare</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a href="contact.html" class="nav-link">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -139,49 +139,57 @@
     </div>
 
     <div class="container">
-        <!-- HOME SECTION -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="hero-text slide-in-left">
-                    <h1 class="hero-title">🤗 Welcome to AI Models</h1>
-                    <p class="hero-subtitle">Your Ultimate AI Model Discovery Platform</p>
-                    <p class="hero-description">
-                        Explore the most powerful and trending AI models in the world. 
-                        From large language models to image generators, speech recognition to text understanding—
-                        we provide comprehensive analysis, real-time trends, and detailed insights to help you 
-                        choose the perfect AI model for your project.
-                    </p>
-                    <div class="hero-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">📊</span>
-                            <span>Real-time Analytics</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🎯</span>
-                            <span>Expert Reviews</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">⚡</span>
-                            <span>Performance Metrics</span>
+        <!-- CONTACT US SECTION -->
+        <section class="contact-section">
+            <div class="section-header">
+                <h2>💬 Contact Us</h2>
+                <p>Get in touch with us for any inquiries or support</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email Us</h3>
+                        <p>support@aimodels.com</p>
+                        <p>info@aimodels.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🌐</div>
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">GitHub</a>
+                            <a href="#" class="social-link">LinkedIn</a>
                         </div>
                     </div>
-                    <a href="models.html" class="cta-button">Explore Models</a>
+                    <div class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h3>Business Inquiries</h3>
+                        <p>Partner with us to showcase your AI models</p>
+                        <p>business@aimodels.com</p>
+                    </div>
                 </div>
-                <div class="hero-visual slide-in-right">
-                    <div class="ai-illustration">
-                        <div class="ai-circle circle-1"></div>
-                        <div class="ai-circle circle-2"></div>
-                        <div class="ai-circle circle-3"></div>
-                        <div class="ai-icon">🧠</div>
-                        <div class="ai-particles">
-                            <span class="particle">✨</span>
-                            <span class="particle">💡</span>
-                            <span class="particle">🚀</span>
-                            <span class="particle">⚙️</span>
-                            <span class="particle">🔮</span>
-                            <span class="particle">🎨</span>
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -218,6 +226,34 @@
                 closeSidebar();
             }
         });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                color: white;
+                padding: 20px 30px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                font-weight: 600;
+                z-index: 10000;
+            `;
+            notification.textContent = '✅ Message sent successfully! We\'ll get back to you soon.';
+            document.body.appendChild(notification);
+            
+            this.reset();
+            
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 4000);
+        });
     </script>
 </body>
 </html>
+

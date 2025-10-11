@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Models - Home</title>
+    <title>AI Models - Top 20 Models</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
             <button class="close-btn" id="closeBtn" aria-label="Close Navigation">&times;</button>
         </div>
         <ul class="nav-list">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a href="index.html" class="nav-link">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -31,7 +31,7 @@
                     <span>Home</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a href="models.html" class="nav-link">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
@@ -139,57 +139,23 @@
     </div>
 
     <div class="container">
-        <!-- HOME SECTION -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="hero-text slide-in-left">
-                    <h1 class="hero-title">🤗 Welcome to AI Models</h1>
-                    <p class="hero-subtitle">Your Ultimate AI Model Discovery Platform</p>
-                    <p class="hero-description">
-                        Explore the most powerful and trending AI models in the world. 
-                        From large language models to image generators, speech recognition to text understanding—
-                        we provide comprehensive analysis, real-time trends, and detailed insights to help you 
-                        choose the perfect AI model for your project.
-                    </p>
-                    <div class="hero-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">📊</span>
-                            <span>Real-time Analytics</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🎯</span>
-                            <span>Expert Reviews</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">⚡</span>
-                            <span>Performance Metrics</span>
-                        </div>
-                    </div>
-                    <a href="models.html" class="cta-button">Explore Models</a>
-                </div>
-                <div class="hero-visual slide-in-right">
-                    <div class="ai-illustration">
-                        <div class="ai-circle circle-1"></div>
-                        <div class="ai-circle circle-2"></div>
-                        <div class="ai-circle circle-3"></div>
-                        <div class="ai-icon">🧠</div>
-                        <div class="ai-particles">
-                            <span class="particle">✨</span>
-                            <span class="particle">💡</span>
-                            <span class="particle">🚀</span>
-                            <span class="particle">⚙️</span>
-                            <span class="particle">🔮</span>
-                            <span class="particle">🎨</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- MODELS SECTION -->
+        <section id="models" class="models-section">
+            <div class="section-header">
+                <h2>🔲 Top 20 AI Models</h2>
+                <p>Discover the most trending AI models with comprehensive analysis and real-time metrics</p>
+            </div>
+            
+            <div class="models-grid" id="modelsGrid">
+                <!-- Models will be dynamically inserted here -->
             </div>
         </section>
     </div>
 
-    <!-- Navigation Toggle Script -->
     <script src="chat-bot.js"></script>
+    <script src="models-data.js"></script>
     <script>
+        // Navigation functionality
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
