@@ -263,6 +263,7 @@ function renderReachChart(period, customData = null) {
             <div class="reach-bar-container">
                 <div class="reach-bar total" style="height: ${totalHeight}%;">
                     ${item.totalVisitors > 0 ? `
+                    <div class="bar-count-label">${item.totalVisitors}</div>
                     <div class="reach-tooltip">
                         <strong>Total Visitors</strong><br>
                         ${item.totalVisitors}<br>
@@ -272,6 +273,7 @@ function renderReachChart(period, customData = null) {
                 </div>
                 <div class="reach-bar unique" style="height: ${uniqueHeight}%;">
                     ${item.uniqueUsers > 0 ? `
+                    <div class="bar-count-label unique-label">${item.uniqueUsers}</div>
                     <div class="reach-tooltip">
                         <strong>Unique Users</strong><br>
                         ${item.uniqueUsers}<br>

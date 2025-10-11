@@ -2333,6 +2333,23 @@ html {
     filter: brightness(1.1);
 }
 
+/* Bar Count Labels */
+.bar-count-label {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000000;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.bar-count-label.unique-label {
+    color: #000000;
+}
+
 .reach-bar-label {
     margin-top: 10px;
     font-size: 0.75rem;
@@ -2604,6 +2621,11 @@ html {
     
     .reach-bar-label {
         font-size: 0.7rem;
+    }
+    
+    .bar-count-label {
+        font-size: 0.7rem;
+        top: -18px;
     }
     
     .additional-metrics {
