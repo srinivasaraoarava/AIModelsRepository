@@ -2179,6 +2179,86 @@ html {
     box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
 }
 
+/* Custom Date Range Picker */
+.custom-date-range {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 2px dashed #e5e7eb;
+}
+
+.date-range-inputs {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.date-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.date-input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.date-input {
+    padding: 10px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.date-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.apply-range-btn {
+    padding: 10px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+    height: 42px;
+}
+
+.apply-range-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+.apply-range-btn:active {
+    transform: translateY(0);
+}
+
+.applied-range {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: white;
+    border-left: 4px solid #667eea;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #374151;
+    font-weight: 500;
+}
+
 /* Chart Legend */
 .chart-legend {
     display: flex;
@@ -2490,6 +2570,23 @@ html {
         min-width: 70px;
         padding: 8px 12px;
         font-size: 0.85rem;
+    }
+    
+    .custom-date-range {
+        padding: 15px;
+    }
+    
+    .date-range-inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .date-input-group {
+        min-width: 100%;
+    }
+    
+    .apply-range-btn {
+        width: 100%;
     }
     
     .reach-chart-container {
