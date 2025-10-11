@@ -1,0 +1,17 @@
+AI Models Repository - Production Ready
+
+This repository contains a complete, production-ready web application for showcasing AI models.
+
+Essential Files (9):
+- index.html, models.html, compare.html, contact.html
+- styles.css, chat-bot.js, models-data.js
+- README.md, QUICK_START.md
+
+Total Size: ~484 KB
+Status: ✅ Production Ready
+Version: 2.0.0
+Last Cleaned: October 11, 2025
+
+All redundant documentation has been removed.
+See README.md for complete information.
+
