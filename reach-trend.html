@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Models - Home</title>
+    <title>AI Models - Reach Trend</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
             <button class="close-btn" id="closeBtn" aria-label="Close Navigation">&times;</button>
         </div>
         <ul class="nav-list">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a href="index.html" class="nav-link">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -53,7 +53,7 @@
                     <span>Compare</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a href="reach-trend.html" class="nav-link">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -147,47 +147,155 @@
     </div>
 
     <div class="container">
-        <!-- HOME SECTION -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="hero-text slide-in-left">
-                    <h1 class="hero-title">🤗 Welcome to AI Models</h1>
-                    <p class="hero-subtitle">Your Ultimate AI Model Discovery Platform</p>
-                    <p class="hero-description">
-                        Explore the most powerful and trending AI models in the world. 
-                        From large language models to image generators, speech recognition to text understanding—
-                        we provide comprehensive analysis, real-time trends, and detailed insights to help you 
-                        choose the perfect AI model for your project.
-                    </p>
-                    <div class="hero-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">📊</span>
-                            <span>Real-time Analytics</span>
+        <!-- REACH TREND SECTION -->
+        <section class="reach-trend-section">
+            <div class="section-header">
+                <h2>📊 Platform Reach & Analytics</h2>
+                <p>Track user engagement and platform growth over time</p>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="reach-stats-grid">
+                <div class="reach-stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <h3>Total Visitors</h3>
+                        <p class="stat-number" id="totalVisitors">7</p>
+                        <span class="stat-change positive">Last 7 days</span>
+                    </div>
+                </div>
+
+                <div class="reach-stat-card">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-content">
+                        <h3>Unique Users</h3>
+                        <p class="stat-number" id="uniqueUsers">1</p>
+                        <span class="stat-change positive">Just you!</span>
+                    </div>
+                </div>
+
+                <div class="reach-stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-content">
+                        <h3>Avg. Session</h3>
+                        <p class="stat-number" id="avgSession">17m 30s</p>
+                        <span class="stat-change positive">Testing site</span>
+                    </div>
+                </div>
+
+                <div class="reach-stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-content">
+                        <h3>Growth Rate</h3>
+                        <p class="stat-number" id="growthRate">New Site</p>
+                        <span class="stat-change positive">Just started</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Trend Chart -->
+            <div class="main-reach-chart">
+                <div class="chart-header">
+                    <h3>📈 Visitor Trend Analysis</h3>
+                    <div class="reach-date-filter">
+                        <button class="reach-filter-btn active" data-period="7">7 Days</button>
+                        <button class="reach-filter-btn" data-period="30">30 Days</button>
+                        <button class="reach-filter-btn" data-period="90">90 Days</button>
+                        <button class="reach-filter-btn" data-period="180">6 Months</button>
+                    </div>
+                </div>
+
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #667eea;"></span>
+                        <span>Total Visitors</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #10b981;"></span>
+                        <span>Unique Users</span>
+                    </div>
+                </div>
+
+                <div class="reach-chart-container" id="reachChartContainer">
+                    <!-- Chart will be dynamically rendered here -->
+                </div>
+            </div>
+
+            <!-- Additional Metrics -->
+            <div class="additional-metrics">
+                <div class="metric-card">
+                    <h4>🌍 Geographic Distribution</h4>
+                    <div class="metric-bars">
+                        <div class="metric-bar-item">
+                            <span class="metric-label">Your Location</span>
+                            <div class="metric-bar">
+                                <div class="metric-bar-fill" style="width: 100%;">100%</div>
+                            </div>
                         </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🎯</span>
-                            <span>Expert Reviews</span>
+                        <div class="metric-bar-item">
+                            <span class="metric-label">North America</span>
+                            <div class="metric-bar">
+                                <div class="metric-bar-fill" style="width: 0%;">0%</div>
+                            </div>
                         </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">⚡</span>
-                            <span>Performance Metrics</span>
+                        <div class="metric-bar-item">
+                            <span class="metric-label">Europe</span>
+                            <div class="metric-bar">
+                                <div class="metric-bar-fill" style="width: 0%;">0%</div>
+                            </div>
+                        </div>
+                        <div class="metric-bar-item">
+                            <span class="metric-label">Asia</span>
+                            <div class="metric-bar">
+                                <div class="metric-bar-fill" style="width: 0%;">0%</div>
+                            </div>
                         </div>
                     </div>
-                    <a href="models.html" class="cta-button">Explore Models</a>
                 </div>
-                <div class="hero-visual slide-in-right">
-                    <div class="ai-illustration">
-                        <div class="ai-circle circle-1"></div>
-                        <div class="ai-circle circle-2"></div>
-                        <div class="ai-circle circle-3"></div>
-                        <div class="ai-icon">🧠</div>
-                        <div class="ai-particles">
-                            <span class="particle">✨</span>
-                            <span class="particle">💡</span>
-                            <span class="particle">🚀</span>
-                            <span class="particle">⚙️</span>
-                            <span class="particle">🔮</span>
-                            <span class="particle">🎨</span>
+
+                <div class="metric-card">
+                    <h4>💻 Device Breakdown</h4>
+                    <div class="device-stats">
+                        <div class="device-item">
+                            <span class="device-icon">🖥️</span>
+                            <span class="device-name">Desktop</span>
+                            <span class="device-percent">100%</span>
+                        </div>
+                        <div class="device-item">
+                            <span class="device-icon">📱</span>
+                            <span class="device-name">Mobile</span>
+                            <span class="device-percent">0%</span>
+                        </div>
+                        <div class="device-item">
+                            <span class="device-icon">📲</span>
+                            <span class="device-name">Tablet</span>
+                            <span class="device-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h4>🔥 Popular Pages</h4>
+                    <div class="page-stats">
+                        <div class="page-item">
+                            <span class="page-rank">1</span>
+                            <span class="page-name">Models</span>
+                            <span class="page-views">3 views</span>
+                        </div>
+                        <div class="page-item">
+                            <span class="page-rank">2</span>
+                            <span class="page-name">Home</span>
+                            <span class="page-views">2 views</span>
+                        </div>
+                        <div class="page-item">
+                            <span class="page-rank">3</span>
+                            <span class="page-name">Reach Trend</span>
+                            <span class="page-views">1 view</span>
+                        </div>
+                        <div class="page-item">
+                            <span class="page-rank">4</span>
+                            <span class="page-name">Compare</span>
+                            <span class="page-views">1 view</span>
                         </div>
                     </div>
                 </div>
@@ -195,9 +303,10 @@
         </section>
     </div>
 
-    <!-- Navigation Toggle Script -->
     <script src="chat-bot.js"></script>
+    <script src="reach-data.js"></script>
     <script>
+        // Navigation functionality
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
@@ -229,3 +338,4 @@
     </script>
 </body>
 </html>
+
