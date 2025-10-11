@@ -693,9 +693,9 @@ function renderModels() {
                 <div class="trend-header">
                     <span class="trend-indicator">📈 Trend</span>
                     <div class="date-filter">
-                        <button class="filter-btn active" data-timeframe="1">1W</button>
+                        <button class="filter-btn" data-timeframe="1">1W</button>
                         <button class="filter-btn" data-timeframe="3">1M</button>
-                        <button class="filter-btn" data-timeframe="6">3M</button>
+                        <button class="filter-btn active" data-timeframe="6">6M</button>
                     </div>
                 </div>
                 <div class="chart-container"></div>
@@ -721,8 +721,8 @@ function renderModels() {
         
         modelsGrid.appendChild(modelCard);
         
-        // Render initial chart (1W by default)
-        renderChart(model.id, 1);
+        // Render initial chart (6M by default)
+        renderChart(model.id, 6);
     });
     
     // Add event listeners for date filters
